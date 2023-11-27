@@ -22,7 +22,7 @@ The table below shows the accuracy of our HMM tagger on the validation and train
 |Validation set     |90.7528       |
 |Test set           |90.6283       |
 
-Table II below shows one of the sentences with a tag that was wrongly predicted. https://drive.google.com/file/d//view?usp=sharing
+Table II below shows one of the sentences with a tag that was wrongly predicted.
 ![alt text](https://drive.google.com/uc?id=12cK5Wf8KVoQD0ZMxeVrxZXoyJR-YHgwu)
 
 # Running the code
