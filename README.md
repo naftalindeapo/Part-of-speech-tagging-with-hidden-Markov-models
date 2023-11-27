@@ -34,7 +34,7 @@ Table II below shows one of the sentences with a tag that was wrongly predicted.
 - Libraries: numpy, pandas, unicodedata, seaborn, collections.
 
 ### License
-Refer to the [LICENSE](https://github.com/naftalindeapo/Language-Modeling-and-Byte-pair-Encoding-Project/blob/main/LICENSE).
+Refer to the [LICENSE](https://github.com/naftalindeapo/Part-of-speech-tagging-with-hidden-Markov-models/blob/main/LICENSE).
 
 
 
