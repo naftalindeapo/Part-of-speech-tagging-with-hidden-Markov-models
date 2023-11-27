@@ -4,10 +4,19 @@ The project tackles developing a part-of speech (POS) tagger for Afrikaans, a So
 # Datasets
 The Afrikaans dataset used in this project was acquired from the [South African Centre for Digital Language Resources](https://repo.sadilar.org) (SADiLaR). Specifically, the dataset belongs to the NCHLT (National Centre for Human Language Technologies) Annotated Text Corpora, which is a collection of annotated corpora for various South African languages
 
-# Language modelling
+# Training the basic first-order HMM tagger
+
+### Model Training
+Training the first-order HMM tagger involves estimating transition and emission probabilities, $P(\text{tag}_t|\text{tag}_{t-1})$ and  $P(\text{word}_t|\text{tag}_t)$, respectively based on the occurrences of the words and tags in the training data. See [our paper](https://drive.google.com/uc?id=1PO3UjJjw7FD3zUU4aRJssldiixl8DeRh) here for the full details on the training process.
+
+### Dataset splitting
+To evaluate the performance of our HMM tagger during training, we split the training set into 80/20 training and validation split. 
+
+### POS tagging using the Viterbi algorithm
+The Viterbi algorithm, a dynamic programming algorithm for finding the most probable sequence of hidden states, was implemented to decode part-of-speech tags for new sentences
 
 ### Training
-In our language modeling approach, we estimated the probabilities of trigrams using the Maximum Likelihood Estimation (MLE) method via trigram model. See [our paper](https://drive.google.com/uc?id=1O3Wfa4Ulr-2_qnPZLo4DsXIto-gh3Guw) here for the full details on the training process.
+In our language modeling approach, we estimated the probabilities of trigrams using the Maximum Likelihood Estimation (MLE) method via the trigram model.
 
 ### Text generation
 We used the probabilities estimated from the training data to generate text from our trigram models to construct new sentences or text. Starting with an initial seed or context consisting of the first two characters, we iteratively select the next character based on the conditional probabilities of trigrams by choosing the character with the highest probability given the previous two characters until the desired length of the generated text is reached.
